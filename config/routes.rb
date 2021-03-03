@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-
   scope "(:locale)", locale: /en|vi/ do
     resources :books
     root to: "static_pages#home"
@@ -13,5 +12,6 @@ Rails.application.routes.draw do
     resources :users do
         resources :borrowing_books
     end
+    post "destroy_request", to: "borrowing_book#destroy_request"
   end
 end

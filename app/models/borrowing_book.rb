@@ -38,4 +38,8 @@ class BorrowingBook < ApplicationRecord
                  I18n.t("not_more_than_30_days_from_the_borrowed_date")
     end
   end
+
+  def update_deleted
+    update_column :deleted, 1
+  end
 end

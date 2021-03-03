@@ -17,4 +17,9 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
+  # check whether the borrowed book is pending status
+  def status_pending? book_id
+    @current_user.borrowing_books.find_by(book_id: book_id).pending?
+  end
 end

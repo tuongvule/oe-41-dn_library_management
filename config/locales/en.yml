@@ -9,6 +9,7 @@ en:
   book_out_of_date: Book out of date. Please return the book before re-borrowing.
   the_form_contains: The form contains
   must_be_after_borrowed_date: must be after borrowed date.
+  destroy_request_successfully: You cancelled the request to borrow this book successfully.
   layouts:
     header:
       Library: LIBRARY
@@ -43,9 +44,18 @@ en:
       borrowed_date: Borrowed Date
       expiration_date: Expiration Date
       status: Status
+      delete_request: Delete Request
+      are_you_sure_delete: Are you sure you want to this request to borrow this book?
     new:
       borrow: Borrow
       note: Expiration Date not more than 30 days from the Borrowed Date.
+      
+  borrowing_books:   
+    status:
+        pending: Pending
+        approved: Approved
+        canceled: Canceled
+        rejected: Rejected
 
 
     date:
@@ -73,6 +83,7 @@ en:
       new: New
       borrow: Borrow
       details: Details
+      are_you_sure: Are you sure you want to borrow this book?
 
   sessions:
     login:
@@ -94,3 +105,6 @@ en:
       borrowing_book:
         borrowed_date: "Borrowed Date"
         expiration_date: "Expiration Date"
+  
+
+
