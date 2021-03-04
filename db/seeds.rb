@@ -1,11 +1,11 @@
 50.times do |n|
   id = n+1
-  User.create!(name: "User #{n}",
+  User.create!(name: "User #{id}",
     email: "email#{n}.@gmail.com", birthday: Time.zone.now)
-  Author.create!(name: "Mr.#{n}")
-  Publisher.create!(name: "Publisher.#{n}")
-  Category.create!(name: "Category.#{n}")
-  Book.create!(title: "Book number #{n}",
+  Author.create!(name: "Mr.#{id}")
+  Publisher.create!(name: "Publisher.#{id}")
+  Category.create!(name: "Category.#{id}")
+  Book.create!(title: "Book number #{id}",
     category_id: id, publisher_id: id,
     author_id: id, publish_date: Time.zone.now,
     quantity: 5)

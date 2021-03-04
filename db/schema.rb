@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_02_25_151747) do
 
-  create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.integer "deleted", default: 0
     t.string "description"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_151747) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "book_interactions", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "book_interactions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.boolean "like", default: false
     t.boolean "follow", default: false
     t.integer "rating", default: 0
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_151747) do
     t.index ["user_id"], name: "index_book_interactions_on_user_id"
   end
 
-  create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "title"
     t.string "image"
     t.date "publish_date"
@@ -51,10 +51,10 @@ ActiveRecord::Schema.define(version: 2021_02_25_151747) do
     t.index ["publisher_id"], name: "index_books_on_publisher_id"
   end
 
-  create_table "borrowing_books", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "borrowing_books", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.date "borrowed_date"
     t.date "expiration_date"
-    t.integer "status"
+    t.integer "status", default: 0
     t.integer "deleted", default: 0
     t.bigint "user_id", null: false
     t.bigint "book_id", null: false
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_151747) do
     t.index ["user_id"], name: "index_borrowing_books_on_user_id"
   end
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.integer "parent_id"
     t.integer "deleted", default: 0
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_151747) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "follow_authors", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "follow_authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.integer "deleted", default: 0
     t.bigint "author_id", null: false
     t.bigint "user_id", null: false
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_151747) do
     t.index ["user_id"], name: "index_follow_authors_on_user_id"
   end
 
-  create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "publishers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.integer "deleted", default: 0
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_151747) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
     t.date "birthday"
     t.string "email"

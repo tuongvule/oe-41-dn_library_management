@@ -1,5 +1,22 @@
 en:
   base_title: Book Library
+  borrowed_book: You borrowed this book.
+  over_quantity_to_borrow: The number of borrowed books is more than 5. Please return your books before you buy!
+  error_find_book: Not found the book.
+  request_sent_successfully: Request sent successfully.
+  book_out_of_stock: This book is out of stock, please come back later.
+  book_out_of_date: Book out of date. Please return the book before re-borrowing.
+  destroy_request_successfully: You cancelled the request to borrow this book successfully.
+  admin:
+    header:
+      book_library: Book Library
+      admin_page: Admin Page
+      main_menu: Main Menu
+      english: English
+      vietnamese: Vietnames
+      home: Home
+      logout: Logout
+      borrowing_books: Borrowing Books
   layouts:
     header:
       vi: Vietnames
@@ -20,11 +37,13 @@ en:
       borrowed_date: Borrowed Date
       expiration_date: Expiration Date
       status: Status
+      delete_request: Delete Request
+      are_you_sure_delete: Are you sure you want to this request to borrow this book?
     status:
         pending: Pending
         approved: Approved
-        cancel: Cancel
-        reject: Reject
+        canceled: Canceled
+        rejected: Rejected
 
   date:
     formats:
@@ -38,3 +57,9 @@ en:
       last: "LAST »"
       previous: "‹ PREV"
       next: "NEXT ›"
+
+  static_pages:
+    book:
+      are_you_sure: Are you sure you want to borrow this book?
+
+

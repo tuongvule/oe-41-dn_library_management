@@ -1,0 +1,18 @@
+.production-card {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.product {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.contact {
+  width: 100%;
+  height: 200px;
+  color: white;
+  font-weight: 1000;
+}

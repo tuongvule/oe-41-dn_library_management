@@ -9,6 +9,7 @@
       <th scope="col"><%= t ".borrowed_date" %></th>
       <th scope="col"><%= t ".expiration_date" %></th>
       <th scope="col"><%= t ".status" %></th>
+      <th scope="col"><%= t ".delete_request" %></th>
     </tr>
   </thead>
 
@@ -22,6 +23,13 @@
         <td><%= l e.borrowed_date, format: :long %></td>
         <td><%= l e.expiration_date, format: :long %></td>
         <td><%= e.status_i18n %></td>
+        <% if status_pending? e.book_id %>
+          <td>
+            <%= link_to t(".delete_request"), destroy_request_path(book_id: e.book_id),
+              data: {confirm: t(".are_you_sure_delete")}, method: :post, remote: true,
+              class: "btn btn-primary button", style: "width: 60%;" %>
+          </td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

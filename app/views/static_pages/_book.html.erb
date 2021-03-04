@@ -1,0 +1,21 @@
+<div class="col-sm-3" >
+  <div class="product-card">
+    <div class="badge">New</div>
+    <div class="product-tumb">
+      <img src="https://www.dtv-ebook.com/images/files_2/2020/ban-that-ba-dao!-jen-sincero.jpg" alt="">
+    </div>
+    <div class="product-details">
+      <h5><a href=""><%= book.title %></a></h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+      <div class="product-bottom-details row">
+        <%= link_to "Borrow", send_request_to_borrow_book_path(book_id: book.id),
+            data: {confirm: t(".are_you_sure")}, method: :post, remote: true,
+            class: "btn btn-primary button", style: "width: 100%; margin-bottom: 1px" %>
+        <button type="button" class="btn btn-info"
+        style="width: 100%">Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+

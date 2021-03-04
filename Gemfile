@@ -9,7 +9,6 @@ gem "bootstrap-sass", "3.4.1"
 gem "jbuilder", "~> 2.7"
 gem "jquery-rails"
 gem "kaminari"
-
 gem "kaminari-i18n", "~> 0.5.0"
 gem "mysql2", ">= 0.4.4"
 gem "puma", "~> 4.1"

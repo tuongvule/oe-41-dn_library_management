@@ -1,2 +1,6 @@
 <%= render "static_pages/slide" %>
-<%= render "static_pages/productCard" %>
+<div class="row">
+  <% @books.each do |e| %>
+    <%= render partial: "static_pages/book", locals: {book: e} %>
+  <% end %>
+</div>

@@ -1,5 +1,22 @@
 vi:
   base_title: Thư viện sách
+  borrowed_book: Bạn đã mượn sách này rồi.
+  over_quantity_to_borrow: Số lượng sách đã mượn đã nhiều hơn 5. Vui lòng trả sách trước khi mượn!
+  error_find_book: Không tìm thấy sách này.
+  request_sent_successfully: Gửi yêu cầu thành công.
+  book_out_of_stock: Sách này đã hết trong kho, vui lòng quay lại sau.
+  book_out_of_date: Bạn có sách quá hạn. Vui lòng trả sách trước khi mượn.
+  destroy_request_successfully: Bạn đã hủy yêu cầu mượn cuốn sách này thành công.
+  admin:
+    header:
+      book_library: Thư Viện Sách
+      admin_page: Trang Quản Trị Viên
+      main_menu: Danh mục Chính
+      english: Tiếng Anh
+      vietnamese: Tiếng Việt
+      home: Trang chủ
+      logout: Đăng xuất
+      borrowing_books: Sách đang mượn
   layouts:
     header:
       vi: Tiếng Việt
@@ -21,18 +38,15 @@ vi:
       borrowed_date: Ngày mượn
       expiration_date: Ngày hết hạn
       status: Tình trạng
+      are_you_sure_delete: Bạn có chắc không muốn hủy mượn cuốn sách này?
+      delete_request: Xóa yêu cầu
     status:
       pending: Chưa nhận
       approved: Đã nhận
-      cancel: Bỏ qua
-      reject: Từ chối
+      canceled: Bỏ qua
+      rejected: Từ chối
 
   date:
-    formats:
-      default: "%d/%m/%Y"
-      long: "Ngày %d tháng %m năm %Y"
-      short: "%d/%m"
-  time:
     formats:
       default: "%d/%m/%Y"
       long: "Ngày %d tháng %m năm %Y"
@@ -44,3 +58,9 @@ vi:
       last: "CUỐI CÙNG »"
       previous: "‹ TRƯỚC"
       next: "SAU ›"
+
+  static_pages:
+    book:
+      are_you_sure: Bạn có chắc muốn mượn cuốn sách này không?
+
+
