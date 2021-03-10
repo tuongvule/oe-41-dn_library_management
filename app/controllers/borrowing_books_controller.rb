@@ -67,8 +67,7 @@ class BorrowingBooksController < ApplicationController
   def sent_request_success
     ActiveRecord::Base.transaction do
       @borrowing_book.save!
-      updated_quantity = @book.quantity - 1
-      @book.update_quantity(updated_quantity)
+      @book.update_quantity(@book.quantity - 1)
       flash[:success] = t "request_sent_successfully"
       redirect_to root_path
     end

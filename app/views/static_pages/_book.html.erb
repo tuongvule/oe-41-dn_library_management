@@ -9,15 +9,15 @@
       <h5><a href=""><%= book.title %></a></h5>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
       <div class="product-bottom-details row">
-        <% if !@current_user.nil? %>
-        <%= link_to t(".borrow"), new_user_borrowing_book_path(@current_user.id, id: book.id),
-         class: "btn btn-primary button", style: "width: 100%; margin-bottom: 1px" %>
-         <% else %>
-         <%= link_to t(".borrow"), sessions_login_path,
-         class: "btn btn-primary button", style: "width: 100%; margin-bottom: 1px" %>
-         <% end %>
+        <% if @current_user.present? %>
+          <%= link_to t(".borrow"), new_user_borrowing_book_path(@current_user.id, id: book.id),
+            class: "btn btn-primary button", style: "width: 100%; margin-bottom: 1px" %>
+        <% else %>
+          <%= link_to t(".borrow"), sessions_login_path,
+            class: "btn btn-primary button", style: "width: 100%; margin-bottom: 1px" %>
+        <% end %>
         <button type="button" class="btn btn-info"
-        style="width: 100%"><%= t(".details") %></button>
+          style="width: 100%"><%= t(".details") %></button>
       </div>
     </div>
   </div>
